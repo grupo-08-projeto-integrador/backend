@@ -2,16 +2,19 @@
 <html>
 <head>
 	<title>Login</title>
+	<link rel="stylesheet" href="login.css">
 </head>
 <body>
-	<h1>Login</h1>
-	<form onsubmit="return login()">
-		<label for="username">Username:</label>
-		<input type="text" id="username" name="username"><br><br>
-		<label for="password">Password:</label>
-		<input type="password" id="password" name="password"><br><br>
+	<div class = "content1">
+	<h1 id="loginT1">Login</h1>
+	<form onsubmit="return login()" method="post" action="login.php">
+		<div class="centerlogin">
+		<input type="text" id="username" name="username" placeholder="Ensira Seu E-mail"><br><br>
+		<input type="password" id="password" name="password" placeholder="Ensira Sua Senha"><br><br>
 		<input type="submit" value="Login">
+		</div>
 	</form>
+</div>
 	<script src="login.js"></script>
 </body>
 </html>

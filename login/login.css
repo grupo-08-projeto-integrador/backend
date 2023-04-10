@@ -1,0 +1,17 @@
+
+.content1{
+    display: flex;
+    flex-direction: column;
+
+}
+.centerlogin{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#loginT1{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
