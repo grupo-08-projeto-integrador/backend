@@ -1,17 +1,22 @@
 <?php
-// Conecte-se ao banco de dados
-$db = new PDO('pgsql:host=localhost;dbname=login_db', 'username', 'password');
-
-// Pegue as informações de login do formulário
+// Obtenha as informações do formulário
 $username = $_POST['username'];
 $password = $_POST['password'];
+$email = $_POST['email'];
 
-// Crie um hash da senha usando a função de hash 'crypt()'
-$password_hash = crypt($password, gen_salt('bf', 8));
+// Crie uma conexão com o banco de dados PostgreSQL
+$dbhost = 'localhost';
+$dbname = 'login_db';
+$dbuser = 'postgres';
+$dbpass = '091974';
+$conn = new PDO("pgsql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
 
-// Insira o nome de usuário e hash da senha no banco de dados
-$stmt = $db->prepare('INSERT INTO users (username, password_hash) VALUES (:username, :password_hash)');
-$stmt->execute(array(':username' => $username, ':password_hash' => $password_hash));
+// Crie um hash da senha usando a função de hash 'password_hash()'
+$password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+// Insira as informações do usuário na tabela 'users'
+$stmt = $conn->prepare('INSERT INTO users (username, password, email) VALUES (:username, :password, :email)');
+$stmt->execute(array(':username' => $username, ':password' => $password_hash, ':email' => $email));
 
 echo "Usuário criado com sucesso!";
 ?>
