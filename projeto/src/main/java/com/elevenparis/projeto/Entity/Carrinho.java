@@ -10,6 +10,11 @@ import lombok.Setter;
 @Table(name = "Carrinho", schema = "public")
 public class Carrinho extends AbstractEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter
+    @Column(name = "id", nullable = false, unique = true)
+    private Long id;
     @Getter @Setter
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "Carrinho",

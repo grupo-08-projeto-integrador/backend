@@ -1,15 +1,17 @@
 package com.elevenparis.projeto.Entity;
 
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Table(name = "categoria", schema = "public")
 public class Categoria extends AbstractEntity{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter
+    @Column(name = "id", nullable = false, unique = true)
+    private Long id;
 
     @Getter @Setter
     private String camisa;
