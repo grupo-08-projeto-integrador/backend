@@ -5,7 +5,6 @@ import java.util.List;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
 @Entity
 @Table(name = "Carrinho", schema = "public")
 public class Carrinho extends AbstractEntity {
@@ -15,23 +14,13 @@ public class Carrinho extends AbstractEntity {
     @Getter
     @Column(name = "id", nullable = false, unique = true)
     private Long id;
-    @Getter @Setter
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(name = "Carrinho",
-        uniqueConstraints = @UniqueConstraint(
-                columnNames = {
-                        "carrinho.id",
-                        "itemVenda.id"
-                }
-        ),
-            joinColumns = @JoinColumn(
-                    name = "carrinho.id"
-            ),
 
-            inverseJoinColumns = @JoinColumn(
-                    name = "itemVenda.id"
-            )
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "Carrinho_ItemVenda",
+            joinColumns = @JoinColumn(name = "carrinho_id"),
+            inverseJoinColumns = @JoinColumn(name = "itemVenda_id")
     )
+    @Getter @Setter
     private List<ItemVenda> items;
 
     @Getter @Setter
@@ -44,7 +33,6 @@ public class Carrinho extends AbstractEntity {
     private String formaPagamento;
 
     @Getter @Setter
-    private String ComprovantePagamento;
-
-
+    private String comprovantePagamento;
 }
+

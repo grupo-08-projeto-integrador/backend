@@ -26,7 +26,7 @@ public class Produto extends AbstractEntity {
 
     @Getter @Setter
     @Column(name = "imagem", nullable = false)
-    @OneToMany
+    //@OneToMany
     private String imagem;
 
     @Getter @Setter
