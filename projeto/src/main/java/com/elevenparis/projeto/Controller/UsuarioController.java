@@ -9,6 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @Controller
 @RequestMapping("/api/usuario")
 public class UsuarioController {
@@ -19,7 +21,7 @@ public class UsuarioController {
     public ResponseEntity<Usuario> findById(@PathVariable Long id){
         return ResponseEntity.ok().body(this.usuarioRepository.findById(id).orElse(new Usuario()));
     }
-
+/*
     @GetMapping("/{tipodeusuario}/{id}")
     public ResponseEntity<Usuario> getUser(@PathVariable String tipodeusuario, @PathVariable Long id) {
         Usuario usuario = null;
@@ -36,6 +38,8 @@ public class UsuarioController {
             return ResponseEntity.ok(usuario);
         }
     }
+
+ */
     @PutMapping("/{id}")
     public ResponseEntity<?> update(@RequestBody Usuario usuario){
         if (usuario.equals(usuario.getId()) && !this.usuarioRepository.findById(usuario.getId()).isEmpty()) {
@@ -52,6 +56,16 @@ public class UsuarioController {
         return ResponseEntity.ok().body("Cadastro Efetuado com Sucesso ");
     }
 
-
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteUsuario(@PathVariable Long id) {
+        Optional<Usuario> optionalUser = usuarioRepository.findById(id);
+        if (optionalUser.isPresent()) {
+            Usuario usuario = optionalUser.get();
+            usuarioRepository.delete(usuario);
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 
 }
