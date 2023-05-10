@@ -2,58 +2,70 @@ package com.elevenparis.projeto.Controller;
 
 import com.elevenparis.projeto.Entity.Descricao;
 import com.elevenparis.projeto.Repository.DescricaoRepository;
+import com.elevenparis.projeto.Services.DescricaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/api/descricao")
 public class DescricaoController {
+
+    @Autowired
+    DescricaoService descricaoService;
     @Autowired
     DescricaoRepository descricaoRepository;
 
     @GetMapping("/{id}")
     public ResponseEntity<Descricao> findById(@PathVariable Long id){
-        return ResponseEntity.ok().body(this.descricaoRepository.findById(id).orElse(new Descricao()));
+        return ResponseEntity.ok().body(this.descricaoService.findById(id));
     }
 
-    @GetMapping("/descricao/{material}")
+    @GetMapping
+    public ResponseEntity<?> findAll() {
+        List<Descricao> descricoes = descricaoService.findAll();
+        return ResponseEntity.ok().body(descricoes);
+    }
+
+    @GetMapping("/material/{material}")
     public ResponseEntity<?> findByMaterial(@PathVariable String material){
-        return ResponseEntity.ok().body(this.descricaoRepository.findByMaterial(material));
+        return ResponseEntity.ok().body(this.descricaoService.findByMaterial(material));
     }
 
-    @GetMapping("/descricao/{cor}")
+    @GetMapping("/cor/{cor}")
     public ResponseEntity<?> findByCor(@PathVariable String cor){
-        return ResponseEntity.ok().body(this.descricaoRepository.findByCor(cor));
+        return ResponseEntity.ok().body(this.descricaoService.findByCor(cor));
     }
 
-    @GetMapping("/descricao/{marca}")
+    @GetMapping("/marca/{marca}")
     public ResponseEntity<?> findByMarca(@PathVariable String marca){
-        return ResponseEntity.ok().body(this.descricaoRepository.findByMarca(marca));
+        return ResponseEntity.ok().body(this.descricaoService.findByMarca(marca));
     }
 
-    @GetMapping("/descricao/{tamanhos}")
+    @GetMapping("/tamanhos/{tamanhos}")
     public ResponseEntity<?> findByTamanhos(@PathVariable String tamanhos){
-        return ResponseEntity.ok().body(this.descricaoRepository.findByTamanhos(tamanhos));
+        return ResponseEntity.ok().body(this.descricaoService.findByTamanhos(tamanhos));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> update(@PathVariable Long id, Descricao descricao){
-        return ResponseEntity.ok().body(this.descricaoRepository.save(descricao));
+    public ResponseEntity<Descricao> update(@PathVariable Long id, @RequestBody Descricao descricao){
+        Descricao updatedDescricao = this.descricaoService.update(id, descricao);
+        return ResponseEntity.ok().body(updatedDescricao);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id){
-        this.descricaoRepository.deleteById(id);
+        this.descricaoService.delete(id);
         return ResponseEntity.ok().build();
     }
 
     @PostMapping
-    public ResponseEntity<?> create(@RequestBody Descricao descricao){
-        this.descricaoRepository.save(descricao);
-        return ResponseEntity.ok().body("Criado com sucesso!");
+    public ResponseEntity<Descricao> create(@RequestBody Descricao descricao){
+        Descricao createdDescricao = this.descricaoService.create(descricao);
+        return ResponseEntity.ok().body(createdDescricao);
     }
-
 
 }
