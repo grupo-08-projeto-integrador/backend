@@ -10,7 +10,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "usuarios", schema = "public")
 public class Usuario extends AbstractEntity{
-
+@Id
     @Getter @Setter
     @Column(name = "username", nullable = false, unique = true)
     private String username;
