@@ -27,10 +27,10 @@ public class UsuarioController {
         Usuario usuario = null;
         if (tipodeusuario.equals("admin")) {
             // busca um usuário como administrador
-            usuario = usuarioService.findUserByIdAsAdmin(id);
+            usuario = UsuarioService.findUserByIdAsAdmin(id);
         } else if (tipodeusuario.equals("client")) {
             // busca um usuário como cliente
-            usuario = usuarioService.findUserByIdAsClient(id);
+            usuario = UsuarioService.findUserByIdAsClient(id);
         }
         if (usuario == null) {
             return ResponseEntity.notFound().build();
@@ -38,7 +38,6 @@ public class UsuarioController {
             return ResponseEntity.ok(usuario);
         }
     }
-
  */
     @PutMapping("/{id}")
     public ResponseEntity<?> update(@RequestBody Usuario usuario){
