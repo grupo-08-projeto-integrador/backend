@@ -20,8 +20,22 @@ public class UsuarioController {
         return ResponseEntity.ok().body(this.usuarioRepository.findById(id).orElse(new Usuario()));
     }
 
-    @GetMapping("/{tipodeusuario}")
-
+    @GetMapping("/{tipodeusuario}/{id}")
+    public ResponseEntity<Usuario> getUser(@PathVariable String tipodeusuario, @PathVariable Long id) {
+        Usuario usuario = null;
+        if (tipodeusuario.equals("admin")) {
+            // busca um usuário como administrador
+            usuario = usuarioService.findUserByIdAsAdmin(id);
+        } else if (tipodeusuario.equals("client")) {
+            // busca um usuário como cliente
+            usuario = usuarioService.findUserByIdAsClient(id);
+        }
+        if (usuario == null) {
+            return ResponseEntity.notFound().build();
+        } else {
+            return ResponseEntity.ok(usuario);
+        }
+    }
     @PutMapping("/{id}")
     public ResponseEntity<?> update(@RequestBody Usuario usuario){
         if (usuario.equals(usuario.getId()) && !this.usuarioRepository.findById(usuario.getId()).isEmpty()) {
