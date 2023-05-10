@@ -10,15 +10,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/carrinho")
+@RequestMapping("/api/carrinho")
 public class CarrinhoController {
 
-    private final CarrinhoRepository carrinhoRepository;
-
     @Autowired
-    public CarrinhoController(CarrinhoRepository carrinhoRepository) {
-        this.carrinhoRepository = carrinhoRepository;
-    }
+    CarrinhoRepository carrinhoRepository;
 
     @GetMapping
     public ResponseEntity<List<Carrinho>> getAllCarrinhos() {
