@@ -1,8 +1,9 @@
 <div align="center"><h1>ELEVEN</h1></div>
 
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/grupo-08-projeto-integrador/backend?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/grupo-08-projeto-integrador/backend?style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/grupo-08-projeto-integrador/backend?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/grupo-08-projeto-integrador/backend?style=for-the-badge)
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
