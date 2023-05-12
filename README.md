@@ -16,7 +16,8 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 * Você instalou a versão mais recente de `<Java>`
 * Você tem uma máquina `<Windows / Linux / Mac>`.
 
-User Story: Eleven - Vitrine Digital
+## User Story: Eleven - Vitrine Digital
+
 Como Lucas, gerente de uma loja de roupas, eu gostaria de ter um site que mostrasse o catálogo da loja de forma eficiente, permitindo a exposição dos produtos em vitrines digitais. Meu objetivo principal é promover os produtos, exibir seus valores e aumentar a divulgação da loja.
 
 Critérios de Aceitação:
