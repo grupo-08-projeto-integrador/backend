@@ -1,20 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
+
 <head>
-	<title>Login</title>
-	<link rel="stylesheet" href="login.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login </title>
+    <link rel="stylesheet" href="./login.css">
 </head>
+
 <body>
-	<div class = "content1">
-	<h1 id="loginT1">Login</h1>
-	<form onsubmit="return login()" method="post" action="login.php">
-		<div class="centerlogin">
-		<input type="text" id="username" name="username" placeholder="Ensira Seu E-mail"><br><br>
-		<input type="password" id="password" name="password" placeholder="Ensira Sua Senha"><br><br>
-		<input type="submit" value="Login">
-		</div>
-	</form>
-</div>
-	<script src="login.js"></script>
+    <div class="caixa__login">
+        <h2>Login</h2>
+        <form>
+            <div class="caixa__login-input">
+                <input type="text" required />
+                <label>Email</label>
+            </div>
+            <div class="caixa__login-input">
+                <input type="password" required />
+                <label>Senha</label>
+            </div>
+            <a>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Acessar
+            </a>
+        </form>
+    </div>
 </body>
+
 </html>
