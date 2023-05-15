@@ -22,6 +22,14 @@ public class UsuarioService {
     }
 
     public Usuario criarUsuario(Usuario usuario) {
+        if(usuario.getUsername().isEmpty()){
+            throw new IllegalArgumentException("Usuario Não Informado");
+        }
+        if (!usuario.getUsername().matches("[a-zA-Z ]")){
+            throw new IllegalArgumentException("Usuario Com Caracteres Não Aceitos");
+        }
+
+
         return usuarioRepository.save(usuario);
     }
 
