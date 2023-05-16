@@ -4,6 +4,7 @@ import com.elevenparis.projeto.Entity.Usuario;
 import com.elevenparis.projeto.Repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -46,5 +47,10 @@ public class UsuarioService {
 
     public void excluirUsuario(Long id) {
         usuarioRepository.deleteById(id);
+    }
+    @Transactional(rollbackFor = Exception.class)
+    public void cadastrar(Usuario usuario){
+        criarUsuario(usuario);
+        usuarioRepository.save(usuario);
     }
 }

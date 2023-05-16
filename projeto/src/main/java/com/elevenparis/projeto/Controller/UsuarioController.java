@@ -2,8 +2,8 @@ package com.elevenparis.projeto.Controller;
 
 import com.elevenparis.projeto.Entity.Usuario;
 import com.elevenparis.projeto.Repository.UsuarioRepository;
-import jakarta.persistence.Id;
-import org.apache.coyote.Response;
+import com.elevenparis.projeto.Services.UsuarioService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -14,45 +14,39 @@ import java.util.Optional;
 @Controller
 @RequestMapping("/api/usuario")
 public class UsuarioController {
+
+    private UsuarioRepository usuarioRepository;
+    private UsuarioService usuarioService;
+
     @Autowired
-    UsuarioRepository usuarioRepository;
+    public UsuarioController(UsuarioService usuarioService, UsuarioRepository usuarioRepository){
+        this.usuarioService = usuarioService;
+        this.usuarioRepository = usuarioRepository;
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity<Usuario> findById(@PathVariable Long id){
-        return ResponseEntity.ok().body(this.usuarioRepository.findById(id).orElse(new Usuario()));
+        Optional<Usuario> usuario = usuarioRepository.findById(id);
+        return usuario.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }
-/*
-    @GetMapping("/{tipodeusuario}/{id}")
-    public ResponseEntity<Usuario> getUser(@PathVariable String tipodeusuario, @PathVariable Long id) {
-        Usuario usuario = null;
-        if (tipodeusuario.equals("admin")) {
-            // busca um usuário como administrador
-            usuario = UsuarioService.findUserByIdAsAdmin(id);
-        } else if (tipodeusuario.equals("client")) {
-            // busca um usuário como cliente
-            usuario = UsuarioService.findUserByIdAsClient(id);
-        }
-        if (usuario == null) {
-            return ResponseEntity.notFound().build();
-        } else {
-            return ResponseEntity.ok(usuario);
-        }
-    }
- */
-    @PutMapping("/{id}")
-    public ResponseEntity<?> update(@RequestBody Usuario usuario){
-        if (usuario.equals(usuario.getId()) && !this.usuarioRepository.findById(usuario.getId()).isEmpty()) {
-            return ResponseEntity.ok().build();
-        }
-        this.usuarioRepository.save(usuario);
-        return ResponseEntity.ok().body("Atualizado Com Sucesso");
 
+    @PutMapping("/{id}")
+    public ResponseEntity<String> update(@PathVariable Long id, @RequestBody Usuario usuario){
+        if (!usuario.getId().equals(id)) {
+            return ResponseEntity.badRequest().body("ID do usuário na URL difere do ID do usuário no corpo da requisição");
+        }
+        usuarioRepository.save(usuario);
+        return ResponseEntity.ok().body("Usuário atualizado com sucesso");
     }
 
     @PostMapping
-    public ResponseEntity<?> cadastro(@RequestBody Usuario usuario){
-        this.usuarioRepository.save(usuario);
-        return ResponseEntity.ok().body("Cadastro Efetuado com Sucesso ");
+    public ResponseEntity<String> cadastrar(@RequestBody Usuario usuario){
+        try{
+            usuarioService.cadastrar(usuario);
+            return ResponseEntity.ok().body("Cadastro efetuado com sucesso");
+        } catch (IllegalArgumentException e){
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
     @DeleteMapping("/{id}")
@@ -66,5 +60,4 @@ public class UsuarioController {
             return ResponseEntity.notFound().build();
         }
     }
-
 }
