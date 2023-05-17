@@ -15,14 +15,16 @@ import java.util.Optional;
 @RequestMapping("/api/usuario")
 public class UsuarioController {
 
+    @Autowired
+    public UsuarioController(UsuarioService usuarioService, UsuarioRepository usuarioRepository){
+    this.usuarioService = usuarioService;
+    this.usuarioRepository = usuarioRepository;
+}
+
     private UsuarioRepository usuarioRepository;
     private UsuarioService usuarioService;
 
-    @Autowired
-    public UsuarioController(UsuarioService usuarioService, UsuarioRepository usuarioRepository){
-        this.usuarioService = usuarioService;
-        this.usuarioRepository = usuarioRepository;
-    }
+
 
     @GetMapping("/{id}")
     public ResponseEntity<Usuario> findById(@PathVariable Long id){
