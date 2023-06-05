@@ -20,7 +20,6 @@ public class UsuarioController {
     this.usuarioService = usuarioService;
     this.usuarioRepository = usuarioRepository;
 }
-
     private UsuarioRepository usuarioRepository;
     private UsuarioService usuarioService;
 

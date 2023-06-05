@@ -1,9 +1,6 @@
 package com.elevenparis.projeto.Entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,7 +27,7 @@ public class Produto extends AbstractEntity {
     @Column(name = "categoria", nullable = false)
     private String categoria;
 
-    @Getter @Setter
-    @Column(name = "estado", nullable = false)
-    private String estado;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_estado")
+    private Estado estado;
 }
