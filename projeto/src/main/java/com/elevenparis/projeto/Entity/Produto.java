@@ -7,33 +7,28 @@ import lombok.Setter;
 @Entity
 @Table(name = "produto", schema = "public")
 public class Produto extends AbstractEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
-    @Column(name = "id", nullable = false, unique = true)
-    private Long id;
     @Getter @Setter
-    @Column(name = "nome", nullable = false)
+    @Column(name = "nome")
     private String nome;
 
     @Getter @Setter
-    @Column(name = "descricao", nullable = false)
+    @Column(name = "descricao")
     private String descricao;
 
     @Getter @Setter
-    @Column(name = "preco", nullable = false)
+    @Column(name = "preco")
     private double preco;
 
     @Getter @Setter
-    @Column(name = "imagem", nullable = false)
+    @Column(name = "imagem")
     //@OneToMany
     private String imagem;
 
     @Getter @Setter
-    @Column(name = "categoria", nullable = false)
+    @Column(name = "categoria")
     private String categoria;
 
     @Getter @Setter
-    @Column(name = "estado", nullable = false)
+    @Column(name = "estado")
     private String estado;
 }

@@ -15,8 +15,9 @@ public class ItemVenda extends AbstractEntity{
     @Getter @Setter
     private int quantidade;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     @Getter @Setter
+    @JoinColumn(name = "produto_id")
     private Produto produto;
 
     @Getter @Setter
