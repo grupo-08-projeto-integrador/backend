@@ -1,2 +1,4 @@
-package com.elevenparis.projeto.Controller;public class EstadoController {
+package com.elevenparis.projeto.Controller;
+
+public class EstadoController {
 }
