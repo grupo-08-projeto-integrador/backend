@@ -27,7 +27,4 @@ public class Produto extends AbstractEntity {
     @Column(name = "categoria", nullable = false)
     private String categoria;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_estado")
-    private Estado estado;
 }
