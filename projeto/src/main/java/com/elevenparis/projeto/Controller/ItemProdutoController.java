@@ -1,7 +1,7 @@
 package com.elevenparis.projeto.Controller;
 
 import com.elevenparis.projeto.Entity.ItemProduto;
-import com.elevenparis.projeto.Repository.ItemProdutoRepository;
+import com.elevenparis.projeto.Services.ItemProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,18 +13,22 @@ import java.util.List;
 @RequestMapping("/api/itemproduto")
 public class ItemProdutoController {
 
+    private final ItemProdutoService itemProdutoService;
+
     @Autowired
-    ItemProdutoRepository itemProdutoRepository;
+    public ItemProdutoController(ItemProdutoService itemProdutoService) {
+        this.itemProdutoService = itemProdutoService;
+    }
 
     @GetMapping
     public ResponseEntity<List<ItemProduto>> getAllItemProdutos() {
-        List<ItemProduto> itemProdutos = itemProdutoRepository.findAll();
+        List<ItemProduto> itemProdutos = itemProdutoService.getAllItemProdutos();
         return new ResponseEntity<>(itemProdutos, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<ItemProduto> getItemProdutoById(@PathVariable Long id) {
-        ItemProduto itemProduto = itemProdutoRepository.findById(id).orElse(null);
+        ItemProduto itemProduto = itemProdutoService.getItemProdutoById(id);
         if (itemProduto != null) {
             return new ResponseEntity<>(itemProduto, HttpStatus.OK);
         } else {
@@ -34,18 +38,14 @@ public class ItemProdutoController {
 
     @PostMapping
     public ResponseEntity<ItemProduto> createItemProduto(@RequestBody ItemProduto itemProduto) {
-        ItemProduto createdItemProduto = itemProdutoRepository.save(itemProduto);
+        ItemProduto createdItemProduto = itemProdutoService.createItemProduto(itemProduto);
         return new ResponseEntity<>(createdItemProduto, HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<ItemProduto> updateItemProduto(@PathVariable Long id, @RequestBody ItemProduto itemProduto) {
-        ItemProduto existingItemProduto = itemProdutoRepository.findById(id).orElse(null);
-        if (existingItemProduto != null) {
-            existingItemProduto.setCor(itemProduto.getCor());
-            existingItemProduto.setTamanho(itemProduto.getTamanho());
-            existingItemProduto.setQuantidade(itemProduto.getQuantidade());
-            ItemProduto updatedItemProduto = itemProdutoRepository.save(existingItemProduto);
+        ItemProduto updatedItemProduto = itemProdutoService.updateItemProduto(id, itemProduto);
+        if (updatedItemProduto != null) {
             return new ResponseEntity<>(updatedItemProduto, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -54,12 +54,7 @@ public class ItemProdutoController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteItemProduto(@PathVariable Long id) {
-        ItemProduto itemProduto = itemProdutoRepository.findById(id).orElse(null);
-        if (itemProduto != null) {
-            itemProdutoRepository.delete(itemProduto);
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+        itemProdutoService.deleteItemProduto(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
