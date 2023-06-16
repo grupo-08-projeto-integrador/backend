@@ -26,7 +26,7 @@ public class UsuarioService {
         if(usuario.getUsername().isEmpty()){
             throw new IllegalArgumentException("Usuario Não Informado");
         }
-        if (!usuario.getUsername().matches("[a-zA-Z ]")){
+        if (!usuario.getUsername().matches("[a-z A-Z]")){
             throw new IllegalArgumentException("Usuario Com Caracteres Não Aceitos");
         }
 
@@ -43,6 +43,10 @@ public class UsuarioService {
             usuarioExistente.setEmail(usuarioAtualizado.getEmail());
             return usuarioRepository.save(usuarioExistente);
         }
+    }
+
+    public Usuario findByEmail(String email) {
+        return usuarioRepository.findByEmail(email);
     }
 
     public void excluirUsuario(Long id) {

@@ -15,4 +15,6 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
     @Query
     List<Usuario> findAllBytipodeusuario(@Param("tipodeusuario")String tipodeusuario);
+
+    Usuario findByEmail(String email);
 }

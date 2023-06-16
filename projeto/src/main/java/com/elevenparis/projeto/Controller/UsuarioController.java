@@ -5,6 +5,7 @@ import com.elevenparis.projeto.Repository.UsuarioRepository;
 import com.elevenparis.projeto.Services.UsuarioService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -39,6 +40,17 @@ public class UsuarioController {
     public ResponseEntity<Usuario> findById(@PathVariable Long id){
         Optional<Usuario> usuario = usuarioRepository.findById(id);
         return usuario.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/authenticate")
+    public ResponseEntity<Usuario> authenticate(@RequestParam("email") String email,
+                                                @RequestParam("password") String password) {
+        Usuario usuario = usuarioService.findByEmail(email);
+        if (usuario != null && usuario.getPassword().equals(password)) {
+            return ResponseEntity.ok(usuario);
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
     }
 
     @PutMapping("/{id}")
