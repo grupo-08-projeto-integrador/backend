@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import ContatosComponent from '../components/CONTATOS/ContatosComponent.vue';
 import CarrinhoComponent from '../components/CARRINHO/CarrinhoComponent.vue';
+import ProductPageComponent from '../components/PRODUCT/ProductPageComponent.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -12,6 +13,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/CarrinhoComponent',
     name: 'CarrinhoComponent',
     component: CarrinhoComponent
+  },
+  {
+    path: '/ProductPageComponent',
+    name: 'ProductPageComponent',
+    component: ProductPageComponent
   }
 ]
 
