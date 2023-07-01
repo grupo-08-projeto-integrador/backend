@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "produto", schema = "public")
 public class Produto extends AbstractEntity {
@@ -16,8 +18,8 @@ public class Produto extends AbstractEntity {
     private String descricao;
 
     @Getter @Setter
-    @Column(name = "preco")
-    private double preco;
+    @Column(name = "preco", nullable = false)
+    private BigDecimal preco;
 
     @Getter @Setter
     @Column(name = "imagem")
