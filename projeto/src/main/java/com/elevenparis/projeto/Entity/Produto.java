@@ -32,5 +32,5 @@ public class Produto extends AbstractEntity {
 
     @Getter @Setter
     @Column(name = "estado")
-    private String estado;
+    private boolean estado;
 }

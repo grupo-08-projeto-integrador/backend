@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {
-    @Query("from Condutor where ativo = 1")
+    @Query("from Produto where estado = true")
     public List<Produto> findAtivo();
 }

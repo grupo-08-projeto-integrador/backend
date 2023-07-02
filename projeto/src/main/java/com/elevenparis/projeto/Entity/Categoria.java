@@ -7,8 +7,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "categoria", schema = "public")
 public class Categoria extends AbstractEntity{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Getter
     @Column(name = "id", nullable = false, unique = true)
     private Long id;

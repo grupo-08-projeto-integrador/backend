@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "barra_de_busca", schema = "public")
 public class BarraDeBusca extends AbstractEntity {
-    @Id
+
     @Getter
     private String input;
 

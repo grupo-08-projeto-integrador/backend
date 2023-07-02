@@ -7,11 +7,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "filtros", schema = "public")
 public class Filtro extends AbstractEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
-    @Column(name = "id", nullable = false, unique = true)
-    private Long id;
+
     @Getter @Setter
     @Column(name = "nome", nullable = false)
     private String nome;

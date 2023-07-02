@@ -8,11 +8,6 @@ import lombok.Setter;
 @Entity
 @Table(name = "descricao", schema = "public")
 public class Descricao extends AbstractEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
-    @Column(name = "id", nullable = false, unique = true)
-    private Long id;
 
     @Getter @Setter
     @Column(name = "material")
