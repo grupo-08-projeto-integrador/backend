@@ -26,7 +26,7 @@
           <div id="descprod">
             <h2 id="h2Prod">{{ product.nome }}</h2>
             <p id="pDesc">{{ product.descricao }}</p>
-            <h3 id="h3Preço">{{ product.preco }}</h3>
+            <h3 id="h3Preço">R$ {{ product.preco }}</h3>
             <div class="containerquantidade">
               <h2 id="Quant">Quantidade</h2>
               <div id="subcont">

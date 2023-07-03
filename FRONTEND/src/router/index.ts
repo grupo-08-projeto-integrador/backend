@@ -1,29 +1,32 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Contatos from '../views/contatos/contatos.view.vue';
-import Carrinho from '../views/carrinho/carrinho.view.vue';
-import ProductPage from '../views/produto/produto.view.vue';
-import Login from '../views/LOGIN/Login.vue';
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import Home from '../views/home/home.view.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/Contatos',
     name: 'Contatos',
-    component: Contatos
+    component: () => import ('../views/contatos/contatos.view.vue')
   },
   {
     path: '/Carrinho',
     name: 'Carrinho',
-    component: Carrinho
+    component: () => import ('../views/carrinho/carrinho.view.vue')
   },
   {
     path: '/ProductPage',
     name: 'ProductPage',
-    component: ProductPage
+    component: () => import ('../views/produto/produto.view.vue')
   },
   {
     path: '/Login',
     name: 'Login',
-    component: Login
+    component: () => import ('../views/LOGIN/Login.vue')
+  }
+  ,
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
   }
 ]
 
