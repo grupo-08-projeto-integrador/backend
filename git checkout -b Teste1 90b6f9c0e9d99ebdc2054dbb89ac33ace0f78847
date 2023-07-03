@@ -1,0 +1,345 @@
+[33mcommit 48437656d5880da33b14620b03bb1d3169550673[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m
+Author: rubens.prado <109166405+Surfle@users.noreply.github.com>
+Date:   Mon Jul 3 16:31:07 2023 -0300
+
+    Create WebConfig.java
+
+[33mcommit 90b6f9c0e9d99ebdc2054dbb89ac33ace0f78847[m[33m ([m[1;32mTeste[m[33m)[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Mon Jul 3 16:14:58 2023 -0300
+
+    App
+
+[33mcommit 5f84b4f047bcc9480bc11f1f0c788b49bd3e364d[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Mon Jul 3 15:28:45 2023 -0300
+
+    produto e login fixes
+
+[33mcommit 0ae2a2e62e09e6c35674b1ade5ceb5d1fa68f953[m
+Author: MKrohn <matheuskrohn@gmail.com>
+Date:   Mon Jul 3 14:48:30 2023 -0300
+
+    ViewLogin
+
+[33mcommit b0b4f81a66f7480c9f7da64ff0cbcf9b07e2eecb[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Mon Jul 3 14:33:04 2023 -0300
+
+    creating views
+
+[33mcommit c7879c558f222461a0a9684f64fdc3954e7cbbfd[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Mon Jul 3 13:19:47 2023 -0300
+
+    clients
+
+[33mcommit e4c1961f0269d17efdcded237bf746e7f7716be9[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Mon Jul 3 12:43:54 2023 -0300
+
+    produto fix
+
+[33mcommit 4e04f0204d0488e1e7df97031ae495b337130135[m
+Author: MKrohn <matheuskrohn@gmail.com>
+Date:   Mon Jul 3 11:04:05 2023 -0300
+
+    Clients Produto e ItemProduto]
+
+[33mcommit f1687ed5cc69d6f1f530f945fbc41cce1fb0a84d[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Mon Jul 3 00:36:51 2023 -0300
+
+    Categoria Reborn
+
+[33mcommit 9b88d20bfa445cce9eb5a99182b750e6a04c4260[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Mon Jul 3 00:19:14 2023 -0300
+
+    basic models
+
+[33mcommit d3e57fcf6689d9191b9c179e91069fd1fc1416a0[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Sun Jul 2 23:31:31 2023 -0300
+
+    fixes in produto service
+
+[33mcommit 63b5561c31cea8fad7bba376cb137c17484d8561[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Sun Jul 2 02:42:27 2023 -0300
+
+    FRONTEND E BACKEND fixes compiling errors
+
+[33mcommit 7705cf0c23be1f17b56a8b056c7b65331948aab8[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Sun Jul 2 01:34:08 2023 -0300
+
+    nomes BACKEND E FRONTEND
+
+[33mcommit 80519750ee8f97fcbb5ea3790f95a1ca6afd7b8f[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Sun Jul 2 01:32:51 2023 -0300
+
+    merge try frontend
+
+[33mcommit a92f01c4a74b59672933012fdd459e7661f719a9[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Sun Jul 2 01:27:57 2023 -0300
+
+    fixes before vue merge
+
+[33mcommit 694daf2e82985934c69de2b6dad16b3e7ab3e1a0[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Sun Jul 2 00:15:08 2023 -0300
+
+    Hot Fixes
+
+[33mcommit a406dc6136dcecd1cb1541ea1d0e7f308b49d497[m
+Merge: 370b2fb 91285b3
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Sat Jul 1 02:06:14 2023 -0300
+
+    merge fix?
+
+[33mcommit 370b2fb8297688186968ab3547b8cb073c2213be[m
+Merge: b410309 d84ddb8
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Sat Jul 1 01:46:18 2023 -0300
+
+    merges fixes
+
+[33mcommit b41030940c13f0bfea6a5a6c34b0faadd63a19e1[m
+Merge: 680251f eaf0a81
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Sat Jul 1 01:41:40 2023 -0300
+
+    merge fixes
+
+[33mcommit 680251f5acc99afa59d4c09df82b4a0bdb772229[m
+Merge: 0a41b43 5cd6a7e
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Sat Jul 1 01:35:52 2023 -0300
+
+    merge fix
+
+[33mcommit eaf0a811b45e5d8d4f122f4c3589465b34701e2e[m[33m ([m[1;31morigin/MatheusKrohnJava[m[33m)[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Fri Jun 16 18:36:33 2023 -0300
+
+    auteticated&fix
+
+[33mcommit 0a41b4349e1a129b7c6a98550b2562db21d5f729[m[33m ([m[1;31morigin/JavaMain[m[33m)[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Tue Jun 13 19:50:32 2023 -0300
+
+    Updt1
+
+[33mcommit 5cd6a7e4c42406d78b304088293111e5b20744b6[m[33m ([m[1;31morigin/MatheusAguiarJava[m[33m)[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Tue Jun 6 21:13:42 2023 -0300
+
+    Checkout Controller , Service e Repository
+
+[33mcommit ea18b1f9edb9d0257c67c69f90928607aa8cf192[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Tue Jun 6 19:48:44 2023 -0300
+
+    FixEstadosAtivosEInativosColocadosDiretoNaAbstractEntity
+
+[33mcommit d84ddb875ae2efbc9a8c15ccaf2bbfc4850657a7[m[33m ([m[1;31morigin/RubensPradoJava[m[33m)[m
+Author: rubens.prado <109166405+Surfle@users.noreply.github.com>
+Date:   Mon Jun 5 23:00:14 2023 -0300
+
+    Incluido as services, concluído ProdutoService e adaptado ProdutoController v2
+
+[33mcommit dd25a207487ec0e50083dd8e79ee630b32440c27[m
+Author: rubens.prado <109166405+Surfle@users.noreply.github.com>
+Date:   Mon Jun 5 22:56:22 2023 -0300
+
+    Incluido as services, concluído ProdutoService e adaptado ProdutoController
+
+[33mcommit 0a4cf2e8f8cd5f5f3b57dc9dd4d2f99538664bba[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Mon Jun 5 21:20:45 2023 -0300
+
+    EstadoFix2
+
+[33mcommit 6dda8ccc0046895e35557a7c9743d89b6f2b0a08[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Mon Jun 5 21:19:57 2023 -0300
+
+    EstadoFix
+
+[33mcommit 74043150b8b458a802564e8dc6cc903643d129d8[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Mon Jun 5 21:17:48 2023 -0300
+
+    ItensVenda Service , Controller e Repository
+
+[33mcommit 42024d1b7da02d722c2d0d92c0aad43e6ffd5898[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Mon Jun 5 20:34:52 2023 -0300
+
+    Categoria Controller,Repositoy e Service
+
+[33mcommit 9126e2ee9d3554b129d5f3eb47daaffaac276ddf[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Mon Jun 5 20:14:59 2023 -0300
+
+    Estado_Repository_FixProdutos
+
+[33mcommit d434dc460d24b625bb9de1c011aef7d4397dae92[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Tue May 16 21:28:29 2023 -0300
+
+    Update 16
+
+[33mcommit f0ff77bd3bf1de4974830da3e32e772ba1903786[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Tue May 16 20:07:42 2023 -0300
+
+    Filtro Controller,Repository e Service.
+
+[33mcommit 761bdc2e2ad5f2cb855754448197c6929de153f6[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Mon May 15 21:13:35 2023 -0300
+
+    Update de validacao para teste postman Corrigir erro
+
+[33mcommit 220317c491684e5306fcdf4d94acca66d2103fa5[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Mon May 15 20:49:34 2023 -0300
+
+    Variavel De Validacao de Usuario
+
+[33mcommit 1fc2e7f1622fd4ae6b0f8b852a4642b569d59bc8[m[33m ([m[1;31morigin/login[m[33m)[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Mon May 15 20:35:27 2023 -0300
+
+    pagina de login remodificada
+
+[33mcommit 91285b3362bf4bfd6319ee75678f55273ed29774[m[33m ([m[1;31morigin/LucasAdrianoJava[m[33m)[m
+Author: ferreiraluc <l.adrianobf@gmail.com>
+Date:   Wed May 10 20:32:42 2023 -0300
+
+    update services
+
+[33mcommit 4c36982da3db817d21ddc28fd8bf5d60a5290671[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Wed May 10 20:30:06 2023 -0300
+
+    Services
+
+[33mcommit 60541cc23b17b589b2a7dcba07377d01bf424548[m
+Author: ferreiraluc <l.adrianobf@gmail.com>
+Date:   Wed May 10 20:17:36 2023 -0300
+
+    update Services
+
+[33mcommit a93cf04be5078cc1ada5ec66441b55603e701e2a[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Wed May 10 17:36:54 2023 -0300
+
+    Services Usuario
+
+[33mcommit f254274dbf9457f0900d135cdcd5f9a8d84008f2[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Wed May 10 17:13:34 2023 -0300
+
+    Controller Completo De Usuario
+
+[33mcommit 9804f11c040efef54887c1fe22064cadb996786b[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Wed May 10 17:09:24 2023 -0300
+
+    Get Para tipodeusuario No Usuario
+
+[33mcommit a352bf3a4f37ed483888ba037cd6a2b84d5a4576[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Wed May 10 17:00:44 2023 -0300
+
+    Controller Usuario Post Put Get
+
+[33mcommit 0d8b9c40616f9199239955b8d17061694603edbe[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Tue May 9 21:39:27 2023 -0300
+
+    Controller,Repository,Service de ItemProduto
+
+[33mcommit c6a7cfee4ca65605c250d4197a1930d4fc771d64[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Tue May 9 21:26:00 2023 -0300
+
+    fixes Carrinho
+
+[33mcommit 468cf7c24a4259b09a8437df313edc6b4875e5ec[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Tue May 9 21:19:25 2023 -0300
+
+    Atualizacao 09-05
+
+[33mcommit e7b7b4433adca16b4425924494fb8a85bee1651e[m
+Author: ferreiraluc <l.adrianobf@gmail.com>
+Date:   Tue May 9 21:10:39 2023 -0300
+
+    update Controller
+
+[33mcommit 0cbe0f26451930699f93739f540cb7bc47d1b4d5[m
+Author: Surfle <rubens_living@hotmail.com>
+Date:   Tue May 9 21:02:28 2023 -0300
+
+    Service, Controller e Repository de produto e itemvenda
+
+[33mcommit 1deae426c6aa7b201f28dee5aafd4dd37094f9b8[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Tue May 9 20:56:46 2023 -0300
+
+    Controller Service Repository Carrinho
+
+[33mcommit 7a6a7e7d06b3622ea3b1200f47c2ec6f7fef940f[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Tue May 9 20:53:36 2023 -0300
+
+    Repository Usuario InicioController
+
+[33mcommit bcdbab125634035a21cd048a7b1846ded7e291e2[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Mon May 8 21:04:14 2023 -0300
+
+    Controller's
+
+[33mcommit 0d16181190f8d07b1d5a9f3316823eba5a791bc7[m
+Author: MatheuZAguiar <matheuspaguiar099@gmail.com>
+Date:   Mon May 8 20:52:20 2023 -0300
+
+    Ids Fix And Packages
+
+[33mcommit ddaae41ed941a503677635a8f7c2156dbae0a9da[m[33m ([m[1;31morigin/Java[m[33m)[m
+Author: ferreiraluc <l.adrianobf@gmail.com>
+Date:   Thu Apr 27 19:48:51 2023 -0300
+
+    update java
+
+[33mcommit cc601137a054873a090f09515a61440ae0198f8e[m
+Author: ferreiraluc <l.adrianobf@gmail.com>
+Date:   Thu Apr 27 19:47:14 2023 -0300
+
+    update da branch java
+
+[33mcommit 9e68e29e44253360efef09875feda5b553cae170[m
+Author: MGPKrohn <matheuskrohn@gmail.com>
+Date:   Mon Apr 10 20:31:26 2023 -0300
+
+    UpdatePHP
+
+[33mcommit 91340fafbecf5be1384ac2b2c19ec688b5e3d1fd[m
+Author: ferreiraluc <l.adrianobf@gmail.com>
+Date:   Mon Mar 20 20:38:01 2023 -0300
+
+    update login
+
+[33mcommit e72a279483a15644d5bdfc1d80ac0fd396162594[m
+Author: ferreiraluc <70459562+ferreiraluc@users.noreply.github.com>
+Date:   Mon Mar 20 20:35:13 2023 -0300
+
+    Initial commit
