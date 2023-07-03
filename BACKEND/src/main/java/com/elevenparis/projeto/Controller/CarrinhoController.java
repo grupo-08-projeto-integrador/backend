@@ -20,7 +20,7 @@ public class CarrinhoController {
         this.carrinhoService = carrinhoService;
     }
 
-    @GetMapping
+    @GetMapping("/lista")
     public ResponseEntity<List<Carrinho>> getAllCarrinhos() {
         List<Carrinho> carrinhos = carrinhoService.getAllCarrinhos();
         return new ResponseEntity<>(carrinhos, HttpStatus.OK);

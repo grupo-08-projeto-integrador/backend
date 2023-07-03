@@ -7,7 +7,7 @@ class ItemProdutoClient{
 
     constructor(){
         this.axiosClient = axios.create({
-            baseURL: "http://localhost:8090/api/itemproduto",
+            baseURL: "http://localhost:5432/api/itemproduto",
             headers: { "Content-type": "application/json"},
         });
     }

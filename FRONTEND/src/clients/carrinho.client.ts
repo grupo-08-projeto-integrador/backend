@@ -6,14 +6,14 @@ class CarrinhoClient {
 
   constructor() {
     this.axiosClient = axios.create({
-      baseURL: "http://localhost:8090/api/carrinho",
+      baseURL: "http://localhost:5432/api/carrinho",
       headers: { "Content-type": "application/json" },
     });
   }
 
   public async getAll(): Promise<Carrinho[]> {
     try {
-      return (await this.axiosClient.get<Carrinho[]>("/")).data;
+      return (await this.axiosClient.get<Carrinho[]>("/lista")).data;
     } catch (error: any) {
       return Promise.reject(error.response);
     }
