@@ -1,23 +1,23 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import ContatosComponent from '../components/CONTATOS/ContatosComponent.vue';
-import CarrinhoComponent from '../components/CARRINHO/CarrinhoComponent.vue';
-import ProductPageComponent from '../components/PRODUCT/ProductPageComponent.vue';
+import Contatos from '../views/contatos/contatos.view.vue';
+import Carrinho from '../views/carrinho/carrinho.view.vue';
+import ProductPage from '../views/produto/produto.view.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/ContatosComponent',
-    name: 'ContatosComponent',
-    component: ContatosComponent
+    path: '/Contatos',
+    name: 'Contatos',
+    component: Contatos
   },
   {
-    path: '/CarrinhoComponent',
-    name: 'CarrinhoComponent',
-    component: CarrinhoComponent
+    path: '/Carrinho',
+    name: 'Carrinho',
+    component: Carrinho
   },
   {
-    path: '/ProductPageComponent',
-    name: 'ProductPageComponent',
-    component: ProductPageComponent
+    path: '/ProductPage',
+    name: 'ProductPage',
+    component: ProductPage
   }
 ]
 
