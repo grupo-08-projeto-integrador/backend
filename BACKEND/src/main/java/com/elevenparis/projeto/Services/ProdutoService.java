@@ -18,6 +18,7 @@ public class ProdutoService {
         Assert.isTrue(produto.getNome() != null, "nome nao informado");
         Assert.isTrue(produto.getPreco() != null, "preco nao informado");
 
+        this.produtoRepository.save(produto);
 
     }
 
