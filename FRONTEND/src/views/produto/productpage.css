@@ -827,14 +827,18 @@ input.input{
 #divCarrinho {
     display: none;
 }
-#line4{
+#line4 {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30%;
     height: 0px;
     border: 1px solid #000000;
     margin-top: 13px;
-    margin-bottom: 8px;
-}
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
 #divsearch{
     display: none;
 }
