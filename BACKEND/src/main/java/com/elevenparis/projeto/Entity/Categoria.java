@@ -1,33 +1,16 @@
 package com.elevenparis.projeto.Entity;
 
-import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+public enum Categoria {
 
-@Entity
-@Table(name = "categoria", schema = "public")
-public class Categoria extends AbstractEntity{
+camisa,
 
-    @Getter
-    @Column(name = "id", nullable = false, unique = true)
-    private Long id;
+camiseta,
 
-    @Getter @Setter
-    private String camisa;
+calca,
 
-    @Getter @Setter
-    private String camiseta;
+shorts,
 
-    @Getter @Setter
-    private String calca;
+tenis,
 
-    @Getter @Setter
-    private String shorts;
-
-    @Getter @Setter
-    private String tenis;
-
-    @Getter @Setter
-    private String blusa;
-
+blusa
 }

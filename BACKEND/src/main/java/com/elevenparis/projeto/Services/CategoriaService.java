@@ -1,6 +1,5 @@
 package com.elevenparis.projeto.Services;
 
-import com.elevenparis.projeto.Entity.Categoria;
 import com.elevenparis.projeto.Repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

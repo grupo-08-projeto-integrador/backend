@@ -1,6 +1,5 @@
 package com.elevenparis.projeto.Controller;
 
-import com.elevenparis.projeto.Entity.Categoria;
 import com.elevenparis.projeto.Services.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

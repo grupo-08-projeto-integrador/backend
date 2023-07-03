@@ -29,8 +29,4 @@ public class Produto extends AbstractEntity {
     @Getter @Setter
     @Column(name = "categoria")
     private String categoria;
-
-    @Getter @Setter
-    @Column(name = "estado")
-    private boolean estado;
 }
