@@ -1,5 +1,8 @@
 
 @media (max-width:425px) {
+   html{
+    background-color: #ffffff;
+   }
     .Desktop{
         margin: 0;
         padding: 0;

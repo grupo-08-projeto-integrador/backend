@@ -10,11 +10,12 @@ body{
     padding: 0px;
     margin: 0px;
     border: 0px;
-    background: linear-gradient(90deg,
+    background-color: white;
+    /*background: linear-gradient(90deg,
             rgb(142, 142, 142) 0%,
             rgb(118, 118, 124) 35%,
             rgb(224, 231, 233) 100%);
-}
+*/}
 /*Menu Hamburguer*/
 #hamburguer {
     z-index: 2;
