@@ -9,16 +9,6 @@
           <div class="line" id="line3"></div>
         </div>
   
-        <nav class="nav" id="nav">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Carrinho</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Camisetas</a></li>
-            <li><a href="#">Calças</a></li>
-            <li><a href="#">Tênis</a></li>
-          </ul>
-        </nav>
         <div class="menu-bg" id="menu-bg"></div>
       </div>
   </div>
