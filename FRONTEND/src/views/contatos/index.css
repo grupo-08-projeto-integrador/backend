@@ -2,7 +2,8 @@
 @media (max-width:425px) {
    html{
     background-color: #ffffff;
-   }
+
+}
     .Desktop{
         margin: 0;
         padding: 0;
@@ -257,6 +258,7 @@
         align-content: center;
         align-items: center;
         margin: 0px;
+        justify-content: space-between;
     }
 
     #box1 {
@@ -821,6 +823,7 @@
 }
 
 @media (min-width:769px){
+    
     .mobiletable{
         margin: 0;
         padding: 0;
