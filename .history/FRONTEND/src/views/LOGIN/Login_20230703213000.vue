@@ -8,7 +8,7 @@
           <div class="line" id="line2"></div>
           <div class="line" id="line3"></div>
         </div>
-        
+  
         <div class="menu-bg" id="menu-bg"></div>
       </div>
   </div>
@@ -28,8 +28,8 @@
         <span></span>
         <span></span>
         <span></span>
-      <button class="butao" @click.prevent="acessar">Acessar</button>
       </a>
+      <button @click.prevent="acessar">Acessar</button>
     </form>
   </div>
 </template>
