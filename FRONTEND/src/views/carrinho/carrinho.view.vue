@@ -59,13 +59,16 @@
 
 <script>
 export default {
-  props: {
-    produtosCarrinho: {
-      type: Array,
-      required: true
-    }
+  data() {
+    return {
+      produtosCarrinho: [],
+      // outros dados do componente
+    };
   },
   methods: {
+    addToCart(item) {
+      this.produtosCarrinho.push(item);
+    },
     hamburguerOnClick() {
       const menu = document.getElementById("nav");
       const menuBg = document.getElementById("menu-bg");
@@ -95,7 +98,7 @@ export default {
       }
     },
     removerDoCarrinho(produtoId) {
-      this.$emit('remover-do-carrinho', produtoId);
+      this.produtosCarrinho = this.produtosCarrinho.filter(produto => produto.id !== produtoId);
     },
     calcularTotal() {
       if (Array.isArray(this.produtosCarrinho)) {
@@ -104,9 +107,11 @@ export default {
         return 0;
       }
     }
-  }
+  },
 };
 </script>
+
+
 
 <style scoped>
 @import './carrinho.css';

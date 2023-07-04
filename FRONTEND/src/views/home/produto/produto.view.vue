@@ -3,7 +3,7 @@
     <div id="topbar">
       <div id="divVoltar">
         <button id="botaoimg" @click="goBack">
-          <img id="pngtop" src="imagens/LeftVoltar.png">
+          <img id="pngtop" src="imagens/LeftVoltar.png" />
         </button>
       </div>
       <div id="divELEVEN">
@@ -11,18 +11,26 @@
       </div>
       <div id="divCarrinho">
         <button id="botaoimg" @click="goToCart">
-          <img id="pngtop" src="imagens/shoppingCarrinho.png">
+          <img id="pngtop" src="imagens/shoppingCarrinho.png" />
         </button>
       </div>
     </div>
     <div id="line4"></div>
     <div id="divsearch">
-      <input type="text" aria-label="Realizar Busca" autocomplete="off" name="Ntt" v-model="searchQuery" class="input" placeholder="O Que Você Procura ?">
+      <input
+        type="text"
+        aria-label="Realizar Busca"
+        autocomplete="off"
+        name="Ntt"
+        v-model="searchQuery"
+        class="input"
+        placeholder="O Que Você Procura ?"
+      />
       <button id="searchButton" @click="searchProduct">Buscar</button>
     </div>
     <div v-if="product">
       <div id="PRODUTO">
-        <img :src="product.imagem" :alt="product.nome" id="imgproduto">
+        <img :src="product.imagem" :alt="product.nome" id="imgproduto" />
         <div id="descprod">
           <h2 id="h2Prod">{{ product.nome }}</h2>
           <p id="pDesc">{{ product.descricao }}</p>
@@ -31,11 +39,18 @@
             <h2 id="Quant">Quantidade</h2>
             <div id="subcont">
               <button id="buttonDecrement" @click="decrementCounter">-</button>
-              <input type="text" :value="counterValue" disabled id="counterValue">
+              <input
+                type="text"
+                :value="counterValue"
+                disabled
+                id="counterValue"
+              />
               <button id="buttonIncrement" @click="incrementCounter">+</button>
             </div>
           </div>
-          <button id="botaoaddcar" @click="addToCart(product)">ADICIONAR AO CARRINHO</button>
+          <button id="botaoaddcar" @click="addToCart(product)">
+            ADICIONAR AO CARRINHO
+          </button>
         </div>
       </div>
       <div class="imagens">
@@ -49,12 +64,12 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   data() {
     return {
-      searchQuery: '',
+      searchQuery: "",
       product: null,
       counterValue: 1,
     };
@@ -76,11 +91,12 @@ export default {
     },
     searchProduct() {
       // Realiza a requisição GET para obter os dados do produto
-      axios.get(`http://localhost:8080/api/produto/5`)
-        .then(response => {
+      axios
+        .get(`http://localhost:8080/api/produto/5`)
+        .then((response) => {
           this.product = response.data;
         })
-        .catch(error => {
+        .catch((error) => {
           console.error(error);
         });
     },
@@ -90,17 +106,16 @@ export default {
         nome: produto.nome,
         preco: produto.preco,
         quantidade: this.counterValue,
-        subtotal: produto.preco * this.counterValue
+        subtotal: produto.preco * this.counterValue,
       };
 
-      this.$emit('add-to-cart', item);
+      this.$emit("addToCart", item); // Emitir evento addToCart com o item como argumento
 
       // Reinicializa a quantidade para 1
       this.counterValue = 1;
 
       // Exibe uma mensagem de sucesso ou redireciona para a página do carrinho
       console.log(item);
-      alert("Produto adicionado ao carrinho com sucesso!");
     },
   },
   mounted() {
@@ -110,5 +125,5 @@ export default {
 </script>
 
 <style>
-@import './productpage.css';
+@import "./productpage.css";
 </style>
