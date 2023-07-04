@@ -76,6 +76,6 @@
   </script>
   
   <style scoped>
-  @import url('/carrinho.css');
+  @import url('./carrinho.css');
   </style>
   

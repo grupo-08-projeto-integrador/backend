@@ -76,7 +76,7 @@
       },
       searchProduct() {
         // Realiza a requisição GET para obter os dados do produto
-        axios.get(`http://localhost:8080/api/produto/1`)
+        axios.get(`http://localhost:8080/api/produto/3`)
           .then(response => {
             this.product = response.data;
           })
