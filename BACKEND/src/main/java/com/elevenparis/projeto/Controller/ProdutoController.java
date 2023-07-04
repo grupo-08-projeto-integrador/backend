@@ -62,8 +62,8 @@ public class ProdutoController {
         }
     }
 
-    @DeleteMapping
-    public ResponseEntity<?> deleta(@RequestParam("id") final Long id) {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleta(@PathVariable("id") final Long id) {
         final Produto produto = this.produtoRepository.findById(id).orElse(null);
 
         this.produtoService.deleta(produto);

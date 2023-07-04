@@ -1,3 +1,81 @@
 <template>
-    <a>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
-</template>
+    <div>
+      <header class="head1"></header>
+      <header class="head2"></header>
+      <div id="hamburguer">
+        <div id="hamburguer-menu" @click="hamburguerOnClick">
+          <div class="line" id="line1"></div>
+          <div class="line" id="line2"></div>
+          <div class="line" id="line3"></div>
+        </div>
+  
+        <nav class="nav" id="nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Carrinho</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Camisetas</a></li>
+            <li><a href="#">Calças</a></li>
+            <li><a href="#">Tênis</a></li>
+          </ul>
+        </nav>
+        <div class="menu-bg" id="menu-bg"></div>
+      </div>
+  
+      <section class="checkout">        <!--PÁGINA DO CHECK-OUT DOS PRODUTOS-->
+        <h1 id="eleven-checkout">ELEVEN</h1>
+        <h2 id="carrinho-checkout">CARRINHO</h2>
+        <div class="itens-checkout">
+          <span class="item1 cont-item-checkout">
+            <div class="check FGtam2"><input class="checkbox" type="checkbox" checked></div>
+            <div class="item-valor-checkout FGtam3">
+              <p id="produto-checkout">T-Shirt Armani</p>
+              <p id="valor-checkout">Subtotal: R$ 450,00</p>
+            </div>
+            <div class="qtde-checkout FGtam2">
+              <button id="btnmenos-checkout">-</button>
+              <span id="qtdeitens-checkout">
+                <p>Qt: </p>
+                <input type="text" value="1" disabled id="counterValue">
+              </span>
+              <button id="btnmais-checkout">+</button>
+            </div>
+            <button class="remover-checkout FGtam1"><img src="./imagens/clear.png" alt="clear"></button>
+          </span>
+        </div>
+        <div class="precototal-checkout">
+          <div id="tpt-checkout">
+            <p>TOTAL: R$ 450,00</p>
+          </div>
+        </div>
+        <div class="divbtnpf-checkout">
+          <div id="btnFP">
+            <button class="btnFP-checkout">FINALIZAR PEDIDO</button>
+            <p id="aviso">Ao clicar no botão acima, 
+            você será redirecionado(a) para nosso WhatsApp e 
+            nosso atendimento finalizará o seu pedido</p>
+          </div>
+          <div>
+            <button class="btnFP-checkout">REALIZAR CADASTRO</button>
+            <p id="aviso">Ainda não possui cadastro? 
+              Cadastre em nossa Loja Virtual.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    methods: {
+      hamburguerOnClick() {
+        // Implementar a lógica do clique do botão hamburguer
+      }
+    }
+  }
+  </script>
+  
+  <style scoped>
+  @import url('/carrinho.css');
+  </style>
+  
